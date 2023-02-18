@@ -1,19 +1,11 @@
 import { StatusBar } from "expo-status-bar";
-import { FlatList, StyleSheet, View } from "react-native";
-import restaurants from "./assets/data/restaurants.json";
-import RestaurantItem from "./src/components/RestaurantItem";
+import { StyleSheet, View } from "react-native";
+import HomeScreen from "./src/screens/HomeScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <RestaurantItem restaurant={restaurants[0]} />
-      <RestaurantItem restaurant={restaurants[1]} />
-      <RestaurantItem restaurant={restaurants[2]} />
-      <RestaurantItem restaurant={restaurants[3]} /> */}
-      <FlatList
-        data={restaurants}
-        renderItem={({ item }) => <RestaurantItem restaurant={item} />}
-      />
+      <HomeScreen />
 
       <StatusBar style="auto" />
     </View>
@@ -27,5 +19,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     padding: 10,
+    paddingVertical: 30,
   },
 });
