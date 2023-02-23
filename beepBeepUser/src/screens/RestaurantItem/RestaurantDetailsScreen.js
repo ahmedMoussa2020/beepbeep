@@ -3,8 +3,8 @@ import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import HeaderScreen from "./HeaderScreen.js";
 import styles from "./styles";
-import ListItems from "../components/ListItems";
-import restaurants from "../../assets/data/restaurants.json";
+import DishListItems from "../../components/DishListItems";
+import restaurants from "../../../assets/data/restaurants.json";
 
 const restaurant = restaurants[0];
 
@@ -14,7 +14,7 @@ const RestaurantDetailsScreen = () => {
       <FlatList
         ListHeaderComponent={() => <HeaderScreen restaurant={restaurant} />}
         data={restaurant.dishes}
-        renderItem={({ item }) => <ListItems dish={item} />}
+        renderItem={({ item }) => <DishListItems dish={item} />}
       />
       <Ionicons
         name="arrow-back-circle"

@@ -1,7 +1,5 @@
 import { View, Text, Image } from "react-native";
 import styles from "./styles";
-// import restaurants from "../../assets/data/restaurants.json";
-// const restaurant = restaurants[0];
 
 const RestaurantDetailsScreen = ({restaurant}) => {
   return (
