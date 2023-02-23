@@ -21,7 +21,7 @@ const DishDetailsScreen = ({}) => {
   };
 
   const getTotal = () => {
-    return (dish.price + quantity).toFixed(2)
+    return (dish.price + quantity).toFixed(2);
   };
 
   return (
@@ -47,7 +47,9 @@ const DishDetailsScreen = ({}) => {
       </View>
 
       <View style={styles.button}>
-        <Text style={styles.buttonText}>Add {quantity} to basket (${getTotal()})</Text>
+        <Text style={styles.buttonText}>
+          Add {quantity} to basket &#8226; ${getTotal()}
+        </Text>
       </View>
     </View>
   );
