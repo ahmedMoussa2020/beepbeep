@@ -1,7 +1,7 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
-// import DishDetailsScreen from "../screens/DishDetailsScreen";
+import DishDetailsScreen from "../screens/DishDetailsScreen";
 import OrderScreen from "../screens/OrderScreen";
 import RestaurantDetailsScreen from "../screens/RestaurantItem/RestaurantDetailsScreen";
 // import OrderDetails from "../screens/OrderDetails";
@@ -13,13 +13,8 @@ const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} />
-      <Stack.Screen
-        name="Restaurant"
-        component={RestaurantDetailsScreen}
-        options={{ headerShown: false }}
-      />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="HomeTabs" component={HomeTabs} />
     </Stack.Navigator>
   );
 };
@@ -31,7 +26,7 @@ const HomeTabs = () => {
     <Tab.Navigator barStyle={{ backgroundColor: "black" }}>
       <Tab.Screen
         name="Home"
-        component={HomeScreen}
+        component={HomeStackNavigator}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="home" size={24} color={color} />
@@ -60,4 +55,15 @@ const HomeTabs = () => {
   );
 };
 
-export default HomeTabs;
+const HomeStack = createNativeStackNavigator();
+
+const HomeStackNavigator = () => {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen name="Restaurants" component={HomeScreen} />
+      <HomeStack.Screen name="Restaurant" component={RestaurantDetailsScreen} />
+      <HomeStack.Screen name="Dish" component={DishDetailsScreen} />
+    </HomeStack.Navigator>
+  );
+};
+export default RootNavigator;
