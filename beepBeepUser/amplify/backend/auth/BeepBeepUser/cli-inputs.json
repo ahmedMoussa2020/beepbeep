@@ -3,8 +3,8 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "beepbe7ebe5a23",
-    "userPoolName": "BeepBeep",
+    "resourceNameTruncated": "beepbe24e402e4",
+    "userPoolName": "BeepBeepUser",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -30,10 +30,10 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "BeepBe7ebe5a23_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "BeepBe24e402e4_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "7ebe5a23",
-    "resourceName": "BeepBeep",
+    "sharedId": "24e402e4",
+    "resourceName": "BeepBeepUser",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [

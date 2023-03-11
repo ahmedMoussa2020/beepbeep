@@ -1,6 +1,6 @@
- export type AmplifyDependentResourcesAttributes = {
+export type AmplifyDependentResourcesAttributes = {
   "auth": {
-    "BeepBeep": {
+    "BeepBeepUser": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
