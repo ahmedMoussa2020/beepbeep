@@ -3,10 +3,10 @@ import RootNavigator from "./src/navigation";
 
 import { NavigationContainer } from "@react-navigation/native";
 
-import { Amplify } from "aws-amplify";
-import config from "./src/aws-exports";
+// import { Amplify } from "aws-amplify";
+// import config from "./src/aws-exports";
 
-Amplify.configure(config);
+// Amplify.configure(config);
 
 export default function App() {
   return (
