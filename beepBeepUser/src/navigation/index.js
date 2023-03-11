@@ -4,8 +4,8 @@ import HomeScreen from "../screens/HomeScreen";
 import DishDetailsScreen from "../screens/DishDetailsScreen";
 import OrderScreen from "../screens/OrderScreen";
 import RestaurantDetailsScreen from "../screens/RestaurantItem/RestaurantDetailsScreen";
-import OrderDetails from "../screens/OrderDetails";
-import BasketScreen from "../screens/BasketScreen";
+// import OrderDetails from "../screens/OrderDetails";
+// import BasketScreen from "../screens/BasketScreen";
 
 import { FontAwesome5 } from "@expo/vector-icons";
 
@@ -35,7 +35,7 @@ const HomeTabs = () => {
       />
       <Tab.Screen
         name="Order"
-        component={OrderStackNavigator}
+        component={OrderScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="receipt" size={24} color={color} />
@@ -44,7 +44,7 @@ const HomeTabs = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={OrderScreen}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name="user-alt" size={24} color={color} />
@@ -63,21 +63,7 @@ const HomeStackNavigator = () => {
       <HomeStack.Screen name="Restaurants" component={HomeScreen} />
       <HomeStack.Screen name="Restaurant" component={RestaurantDetailsScreen} />
       <HomeStack.Screen name="Dish" component={DishDetailsScreen} />
-      <HomeStack.Screen name="Basket" component={BasketScreen} />
     </HomeStack.Navigator>
   );
 };
-
-const OrderStack = createNativeStackNavigator();
-
-const OrderStackNavigator = () => {
-  return (
-    <OrderStack.Navigator>
-      <OrderStack.Screen name="Orders" component={OrderScreen} />
-      <OrderStack.Screen name="Order" component={OrderDetails} />
-    </OrderStack.Navigator>
-  );
-};
-
-
 export default RootNavigator;
